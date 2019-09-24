@@ -1,7 +1,7 @@
 const request = require('request');
 
-module.expots = function sendMessageToSlack(responseURL, JSONmessage) {
-  var postOptions = {
+module.exports = function sendMessageToSlack(responseURL, JSONmessage) {
+  const postOptions = {
     uri: responseURL,
     method: 'POST',
     headers: {
