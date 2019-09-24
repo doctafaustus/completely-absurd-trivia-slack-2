@@ -34,7 +34,33 @@ const prodSecretURL = process.env.PORT ? process.env.prodSecretURL : fs.readFile
 const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
-gameInit(app);
+// gameInit(app);
 
 
+
+app.post('/new-game', app.urlencodedParser, (req, res) => {
+  console.log('/new-game');
+  res.status(200).end();
+
+  game = new Game();
+  sendMessageToSlack(app.webhookURL, {
+    'attachments': [
+      {
+        'text': `A new game has been created! \nWho would like to play?`,
+        'callback_id': 'join_game',
+        'color': '#2ea664',
+        'attachment_type': 'default',
+        'actions': [
+          {
+            'name': 'me',
+            'text': 'Me!',
+            'type': 'button',
+            'value': 'me',
+            'style': 'primary'
+          }
+        ]
+      }
+    ]
+  });
+});
 
