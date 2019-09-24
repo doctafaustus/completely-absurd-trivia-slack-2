@@ -5,6 +5,9 @@ const User = require('./constructors/user-constructor.js');
 // Messages
 const newGameMessage = require('./messages/new-game-message.js');
 
+// Helpers
+const sendMessageToSlack = require('./helpers/send-message-to-slack.js');
+
 
 module.exports = function gameInit(app) {
   let game;
