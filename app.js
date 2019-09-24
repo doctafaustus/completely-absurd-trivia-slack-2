@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true, limit: '1mb' }));
 app.use(bodyParser.json({limit: '1mb'}));
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
-app.urlencodedParser = bodyParser.urlencoded({ extended: false });
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 // Game initializaiton
 const gameInit = require('./src/game-init.js');
@@ -38,29 +38,29 @@ app.webhookURL = prodSecretURL;
 
 
 
-app.post('/new-game', app.urlencodedParser, (req, res) => {
+app.get('/new-game', urlencodedParser, (req, res) => {
   console.log('/new-game');
-  res.status(200).end();
+  // res.status(200).end();
 
-  game = new Game();
-  sendMessageToSlack(app.webhookURL, {
-    'attachments': [
-      {
-        'text': `A new game has been created! \nWho would like to play?`,
-        'callback_id': 'join_game',
-        'color': '#2ea664',
-        'attachment_type': 'default',
-        'actions': [
-          {
-            'name': 'me',
-            'text': 'Me!',
-            'type': 'button',
-            'value': 'me',
-            'style': 'primary'
-          }
-        ]
-      }
-    ]
-  });
+  // game = new Game();
+  // sendMessageToSlack(app.webhookURL, {
+  //   'attachments': [
+  //     {
+  //       'text': `A new game has been created! \nWho would like to play?`,
+  //       'callback_id': 'join_game',
+  //       'color': '#2ea664',
+  //       'attachment_type': 'default',
+  //       'actions': [
+  //         {
+  //           'name': 'me',
+  //           'text': 'Me!',
+  //           'type': 'button',
+  //           'value': 'me',
+  //           'style': 'primary'
+  //         }
+  //       ]
+  //     }
+  //   ]
+  // });
 });
 
