@@ -18,25 +18,7 @@ module.exports = function gameInit(app) {
     res.status(200).end();
   
     game = new Game();
-    sendMessageToSlack(app.webhookURL, {
-    'attachments': [
-      {
-        'text': `A new game has been created! \nWho would like to play?`,
-        'callback_id': 'join_game',
-        'color': '#2ea664',
-        'attachment_type': 'default',
-        'actions': [
-          {
-            'name': 'me',
-            'text': 'Me!',
-            'type': 'button',
-            'value': 'me',
-            'style': 'primary'
-          }
-        ]
-      }
-    ]
-  });
+    sendMessageToSlack(app.webhookURL, newGameMessage());
   });
 
 }
