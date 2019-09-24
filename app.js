@@ -15,6 +15,11 @@ app.urlencodedParser = bodyParser.urlencoded({ extended: false });
 // Game initializaiton
 const gameInit = require('./src/game-init.js');
 
+// Listen on port 3000
+app.listen(process.env.PORT || 3000, () => {
+	console.log('App listening on port 3000');
+});
+
 
 // Set test route
 app.get('/', (req, res) => {
@@ -30,3 +35,6 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
 gameInit(app);
+
+
+
