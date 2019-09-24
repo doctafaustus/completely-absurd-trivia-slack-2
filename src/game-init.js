@@ -10,6 +10,8 @@ module.exports = function gameInit(app) {
   let game;
   const user = new User('Bill');
 
+  console.log('urlencodedParser', app.urlencodedParser);
+
   app.post('/new-game', app.urlencodedParser, (req, res) => {
     console.log('/new-game');
     res.status(200).end();
