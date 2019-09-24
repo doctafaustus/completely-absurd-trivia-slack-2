@@ -14,7 +14,7 @@ module.exports = function gameInit(app) {
   const user = new User('Bill');
 
   app.post('/new-game', app.urlencodedParser, (req, res) => {
-    console.log('/new-game');
+    console.log('/new-game', app.webhookURL);
     res.status(200).end();
   
     game = new Game();
