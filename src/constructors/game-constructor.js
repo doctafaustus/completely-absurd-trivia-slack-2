@@ -4,4 +4,8 @@ module.exports = class Game {
 		this.currentQuestion = 0;
 		this.stopped = false;
 	}
+
+	getUser(username) {
+		return this.users.find(user => user.name === username);
+	}
 }

@@ -15,9 +15,9 @@ app.urlencodedParser = bodyParser.urlencoded({ extended: false });
 // Game initializaiton
 const gameInit = require('./src/game-init.js');
 
-// Listen on port 3000
-app.listen(process.env.PORT || 3000, () => {
-	console.log('App listening on port 3000');
+// Listen on port 4390
+app.listen(process.env.PORT || 4390, () => {
+	console.log('App listening on port 4390');
 });
 
 
