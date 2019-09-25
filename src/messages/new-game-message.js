@@ -2,7 +2,7 @@ module.exports = function newGameMessage() {
   return {
     'attachments': [
       {
-        'text': `A new game has been created! :speak_no_evil: \n*Who would like to play?*`,
+        'text': `:speak_no_evil: A new game has been created! \n*Who would like to play?*`,
         'callback_id': 'join-game',
         'color': '#03ec42',
         'attachment_type': 'default',
