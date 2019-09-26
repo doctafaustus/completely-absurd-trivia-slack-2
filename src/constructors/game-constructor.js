@@ -1,4 +1,5 @@
 module.exports = class Game {
+
 	constructor() {
 		this.users = [];
 		this.currentQuestion = 0;
@@ -8,4 +9,5 @@ module.exports = class Game {
 	getUser(username) {
 		return this.users.find(user => user.name === username);
 	}
+	
 }

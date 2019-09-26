@@ -1,4 +1,5 @@
 module.exports = class User {
+
 	constructor(user) {
 		this.name = user;
 		this.score = 0;
@@ -6,4 +7,5 @@ module.exports = class User {
 		this.answerName = 'no answer';
 		this.wasCorrect = false;
 	}
+	
 }
