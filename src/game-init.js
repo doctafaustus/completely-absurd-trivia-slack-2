@@ -40,10 +40,9 @@ module.exports = function gameInit(app) {
       return sendMessageToSlack(req.body.response_url, { text: 'Users must join first before starting game' });
     }
 
-    let playerList = app.game.users.map((user, index) => {
+    const playerList = app.game.users.map((user, index) => {
       return `\`${index + 1})\` ${user.name}`;
-    });
-    playerList = playerList.join('\n');
+    }).join('\n');
 
     sendMessageToSlack(app.webhookURL, { text: `All set! :completely-absurd-trivia: _Game starts in 5 seconds..._\n>:family: *Contestants:*\n${playerList}` });
 
