@@ -34,7 +34,7 @@ const prodSecretURL = process.env.PORT ? process.env.prodSecretURL : fs.readFile
 const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
+// Set questions
+app.questions = require('./questions/qs-1.js');
+
 gameInit(app);
-
-
-

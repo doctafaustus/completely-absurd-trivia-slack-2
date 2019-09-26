@@ -1,8 +1,10 @@
 // Game components
 const Game = require('./constructors/game-constructor.js');
+const nextQuestion = require('./core-components/next-question.js');
 
 // Actions
 const joinGame = require('./actions/join-game.js');
+const questionGuess = require('./actions/question-guess');
 
 // Messages
 const newGameMessage = require('./messages/new-game-message.js');
@@ -13,6 +15,7 @@ const sendMessageToSlack = require('./helpers/send-message-to-slack.js');
 // Map actions functions to their slack IDs
 const actionMap = {
   'join-game': joinGame,
+  'question_guess': questionGuess
 };
 
 
@@ -43,6 +46,10 @@ module.exports = function gameInit(app) {
     playerList = playerList.join('\n');
 
     sendMessageToSlack(app.webhookURL, { text: `All set! :completely-absurd-trivia: _Game starts in 5 seconds..._\n>:family: *Contestants:*\n${playerList}` });
+
+    setTimeout(() => {
+      nextQuestion(app);
+    }, 2000);
   });
 
 
