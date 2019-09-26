@@ -1,13 +1,13 @@
 module.exports = class Game {
 
-	constructor() {
-		this.users = [];
-		this.currentQuestion = 0;
-		this.stopped = false;
-	}
+  constructor() {
+    this.users = [];
+    this.currentQuestion = 0;
+    this.stopped = false;
+  }
 
-	getUser(username) {
-		return this.users.find(user => user.name === username);
-	}
-	
+  getUser(username) {
+    return this.users.find(user => user.name === username);
+  }
+  
 }
