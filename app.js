@@ -17,7 +17,7 @@ const gameInit = require('./src/game-init.js');
 
 // Listen on port 4390
 app.listen(process.env.PORT || 4390, () => {
-	console.log('App listening on port 4390');
+  console.log('App listening on port 4390');
 });
 
 

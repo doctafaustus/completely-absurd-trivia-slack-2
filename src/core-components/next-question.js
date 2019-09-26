@@ -4,9 +4,9 @@ const resetAnswers = require('../core-components/reset-answers.js');
 const sendMessageToSlack = require('../helpers/send-message-to-slack.js');
 
 module.exports = function nextQuestion(app) {
-	if (app.game.stopped) return;
+  if (app.game.stopped) return;
 
-	const questionObj = app.questions[app.game.currentQuestion];
+  const questionObj = app.questions[app.game.currentQuestion];
 
   var message = {
     'attachments': [
@@ -47,7 +47,7 @@ module.exports = function nextQuestion(app) {
 
   sendMessageToSlack(app.webhookURL, message);
   
-	setTimeout(() => {
+  setTimeout(() => {
     // Evaluate answers
     const correctAnswerText = evaluateAnswers(app);
 
