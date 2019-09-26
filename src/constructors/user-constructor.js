@@ -7,5 +7,5 @@ module.exports = class User {
 		this.answerName = 'no answer';
 		this.wasCorrect = false;
 	}
-	
+
 }
