@@ -14,11 +14,11 @@ module.exports = function(app, actionJSONPayload) {
   user.answerValue = actionJSONPayload.actions[0].value;
   user.answerName = actionJSONPayload.actions[0].name;
 
-  console.log({
-    currentQuestion,
-    'user.answerValue': user.answerValue,
-    'user.answerName': user.answerName
-  });
+  // console.log({
+  //   currentQuestion,
+  //   'user.answerValue': user.answerValue,
+  //   'user.answerName': user.answerName
+  // });
 
   const message = {
     text: `_You answered *${actionJSONPayload.actions[0].name}*._`,

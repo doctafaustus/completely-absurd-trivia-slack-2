@@ -2,7 +2,7 @@ module.exports = function createAnswerResults(app, correctAnswer) {
 
   const gameEnded = (app.game.currentQuestion === app.questions.length) ? true : false;
 
-  let resultText;
+  let resultText = '';
   const correctUsers = [];
   
   app.game.users.forEach(user => {
@@ -17,7 +17,7 @@ module.exports = function createAnswerResults(app, correctAnswer) {
     resultText = `${correctUsers.join(', ')} got it right!`;
   }
 
-  if (!gameEnded) {
+  if (!app.game.ended) {
     resultText += '\n _Next question in 8 seconds..._';
   }
 
@@ -31,7 +31,7 @@ module.exports = function createAnswerResults(app, correctAnswer) {
     return `     *${user.score}* ${user.name} _(${guessedAnswer})_`;
   }).join('\n');
  
-  const title = (!app.gameEnded) ? '>*Leaderboard:*' : '>*GAME ENDED! - FINAL RESULTS:*';
+  const title = (app.game.ended) ? '>*GAME ENDED! - FINAL RESULTS:*' : '>*Leaderboard:*';
   const message = {
     text: `*Answer:* \`${correctAnswer}\`\n${resultText}\n${title}\n${playerList}`
   };

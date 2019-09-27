@@ -1,6 +1,7 @@
 const evaluateAnswers = require('../core-components/evaluate-answers.js');
 const createAnswerResults = require('../core-components/create-answer-results.js');
 const resetAnswers = require('../core-components/reset-answers.js');
+const getFinalResults = require('../core-components/get-final-results.js');
 const sendMessageToSlack = require('../helpers/send-message-to-slack.js');
 
 module.exports = function nextQuestion(app) {
@@ -8,7 +9,7 @@ module.exports = function nextQuestion(app) {
 
   const questionObj = app.questions[app.game.currentQuestion];
 
-  var message = {
+  const message = {
     'attachments': [
       {
         'text': `*${app.game.currentQuestion + 1}/${app.questions.length}*: ${questionObj.question}`,
@@ -55,10 +56,21 @@ module.exports = function nextQuestion(app) {
     sendMessageToSlack(app.webhookURL, createAnswerResults(app, correctAnswerText));
     resetAnswers(app);
 
-    // Send next question
-    setTimeout(() => {
-      nextQuestion(app);
-    }, 4000); 
+    // Send next question or send final results
+    if (app.game.ended) {
+
+      setTimeout(() => {
+        const finalResults = getFinalResults(app);
+        sendMessageToSlack(app.webhookURL, finalResults);
+      }, 3000);
+
+    } else {
+
+      setTimeout(() => {
+        nextQuestion(app);
+      }, 4000);
+
+    }
   }, 6000);
 
 }

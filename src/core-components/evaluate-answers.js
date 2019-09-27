@@ -12,7 +12,8 @@ module.exports = function evaluateAnswers(app) {
 	});
 
   const correctAnswerText = app.questions[app.game.currentQuestion][correctAnswer];
-  app.game.currentQuestion++;
+	app.game.currentQuestion++;
+	if (app.game.currentQuestion === app.questions.length) app.game.ended = true;
   
   return correctAnswerText;
 

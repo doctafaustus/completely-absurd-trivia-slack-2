@@ -4,6 +4,7 @@ module.exports = class Game {
     this.users = [];
     this.currentQuestion = 0;
     this.stopped = false;
+    this.ended = false;
   }
 
   getUser(username) {
