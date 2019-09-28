@@ -10,6 +10,12 @@ module.exports = function nextQuestion(app) {
   const questionObj = app.questions[app.game.currentQuestion];
 
   const message = {
+    "blocks": [
+      {
+        "type": "divider",
+        "block_id": "divider1"
+      }
+    ],
     'attachments': [
       {
         'text': `*${app.game.currentQuestion + 1}/${app.questions.length}*: ${questionObj.question}`,

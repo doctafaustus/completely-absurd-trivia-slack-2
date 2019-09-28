@@ -9,13 +9,13 @@ module.exports = function getFinalResults(app) {
   const winners = app.game.users.filter(user => {
     if (user.score === app.questions.length) perfectScoreObtained = true;
     return user.score === highestScore;
-  }).map(user => `<@${user.name}>`);
+  }).map(user => `<@${user.name}>`).join(', ');
 
   let text;
   if (perfectScoreObtained) {
-    text = `Congratulations ${winners.join(', ')} - *PERFECT SCORE* :trophy: :completely-absurd-trivia: :trophy:`;
+    text = `:trophy: :completely-absurd-trivia: :trophy: *Congratulations* ${winners} - *PERFECT SCORE!* \n _Your gold jacket has been shipped!_ :gold-jacket:  :gold_star_for_you: :gold-jacket:  :gold_star_for_you: :gold-jacket:`;
   } else {
-    text = `Congratulations ${winners.join(', ')}! :party-wizard:`;
+    text = `Congratulations ${winners}! :party-wizard:`;
   }
 
   return { text };

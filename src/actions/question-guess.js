@@ -14,11 +14,23 @@ module.exports = function(app, actionJSONPayload) {
   user.answerValue = actionJSONPayload.actions[0].value;
   user.answerName = actionJSONPayload.actions[0].name;
 
-  // console.log({
-  //   currentQuestion,
-  //   'user.answerValue': user.answerValue,
-  //   'user.answerName': user.answerName
-  // });
+  console.log({
+    currentQuestion,
+    'user.answerValue': user.answerValue,
+    'user.answerName': user.answerName
+  });
+
+  const propValues = [];
+  Object.keys(currentQuestion).forEach(key => {
+    propValues.push(currentQuestion[key]);
+  });
+
+  if (propValues.indexOf(user.answerName) === -1) {
+    console.log('Something went wrong.');
+    user.answerName = 'no answer';
+    return sendMessageToSlack(actionJSONPayload.response_url, { text: 'Too slow!', replace_original: false,
+    response_type: 'ephemeral' });
+  }
 
   const message = {
     text: `_You answered *${actionJSONPayload.actions[0].name}*._`,

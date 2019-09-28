@@ -1,24 +1,27 @@
 module.exports = function createAnswerResults(app, correctAnswer) {
 
-  const gameEnded = (app.game.currentQuestion === app.questions.length) ? true : false;
-
-  let resultText = '';
+  let allOrNoneText = '';
+  let nextQuestionText = '';
   const correctUsers = [];
   
   app.game.users.forEach(user => {
     if (user.wasCorrect) correctUsers.push(user.name);
   });
 
+  const ratio = `${correctUsers.length}/${app.game.users.length}`;
+  const percentage = `${(correctUsers.length / app.game.users.length) * 100}`;
+  const resultSummary = `\`${ratio} (${percentage}%)\``;
+
   if (!correctUsers.length) {
-    resultText = 'No one got it right. :shame:'
+    allOrNoneText = 'No one got it right. :doh: \n';
   } else if (correctUsers.length === 1) {
-    resultText = `Only *${correctUsers[0]}* got it right! :wow:`;
-  } else {
-    resultText = `${correctUsers.join(', ')} got it right!`;
-  }
+    allOrNoneText = `Only *${correctUsers[0]}* got it right! :wow: \n`;
+  } else if (correctUsers.length === app.game.users.length) {
+    allOrNoneText = 'Everyone got it right! :aw-yeah: \n';
+  } else allOrNoneText = '\n';
 
   if (!app.game.ended) {
-    resultText += '\n _Next question in 8 seconds..._';
+    nextQuestionText = '_Next question in 10 seconds..._';
   }
 
   // Sort users by score
@@ -28,12 +31,13 @@ module.exports = function createAnswerResults(app, correctAnswer) {
 
   const playerList = app.game.users.map(user => {
     const guessedAnswer = user.answerName;
-    return `     *${user.score}* ${user.name} _(${guessedAnswer})_`;
+    const correctBold = user.wasCorrect ? '*' : '';
+    return `     *${user.score}* ${correctBold}${user.name} _(${guessedAnswer})_${correctBold}`;
   }).join('\n');
  
   const title = (app.game.ended) ? '>*GAME ENDED! - FINAL RESULTS:*' : '>*Leaderboard:*';
   const message = {
-    text: `*Answer:* \`${correctAnswer}\`\n${resultText}\n${title}\n${playerList}`
+    text: `*Answer:* \`\`\`${correctAnswer}\`\`\`\n${resultSummary} ${allOrNoneText} ${nextQuestionText}\n\n\n${title}\n${playerList}`
   };
 
   return message;

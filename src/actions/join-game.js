@@ -22,7 +22,6 @@ module.exports = function joinGame(app, actionJSONPayload) {
 
   // Push user into game's user list
   app.game.users.push(new User(username));
-  console.log(app.game);
   sendMessageToSlack(app.webhookURL, { text: `_${username} is in!_` });
 
 }

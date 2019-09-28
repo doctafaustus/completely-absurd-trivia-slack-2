@@ -15,30 +15,30 @@ module.exports = [
     d: 'T',
     answer: 'b'
   },
-  // {
-  //   question: 'Regarding the candy, what does \'M&M\' stand for?',
-  //   a: 'Mars and Murrie',
-  //   b: 'Marshall Mathers',
-  //   c: 'Mine & Mine',
-  //   d: 'Mr. Murphy\'s',
-  //   answer: 'a'
-  // },
-  // {
-  //   question: 'What is the capital of Alaska?',
-  //   a: 'Anchorage',
-  //   b: 'Fairbanks',
-  //   c: 'Juneau',
-  //   d: 'Seward',
-  //   answer: 'c'
-  // },
-  // {
-  //   question: 'Which character killed the monster "Grendel"?',
-  //   a: 'Achilles',
-  //   b: 'Perseus',
-  //   c: 'Hercules',
-  //   d: 'Beowulf',
-  //   answer: 'd'
-  // },
+  {
+    question: 'Regarding the candy, what does \'M&M\' stand for?',
+    a: 'Mars and Murrie',
+    b: 'Marshall Mathers',
+    c: 'Mine & Mine',
+    d: 'Mr. Murphy\'s',
+    answer: 'a'
+  },
+  {
+    question: 'What is the capital of Alaska?',
+    a: 'Anchorage',
+    b: 'Fairbanks',
+    c: 'Juneau',
+    d: 'Seward',
+    answer: 'c'
+  },
+  {
+    question: 'Which character killed the monster "Grendel"?',
+    a: 'Achilles',
+    b: 'Perseus',
+    c: 'Hercules',
+    d: 'Beowulf',
+    answer: 'd'
+  },
   // {
   //   question: 'What 1990\'s fad involved something known as a slammer?',
   //   a: 'Tamagotchi',
