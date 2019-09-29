@@ -5,15 +5,14 @@ const fs = require('fs');
 const admin = require('firebase-admin');
 
 // Cloudstore config
-// const serviceAccount = require('./private/serviceAccountKey.json');
-// const serviceAccount = process.env.SERVICE_ACCOUNT_KEY;
-// admin.initializeApp({
-//   credential: admin.credential.cert(serviceAccount)
-// });
-// const db = admin.firestore();
-console.log('HELLO WORLD');
-console.log('------------------SERVICE KEY', process.env.SERVICE_ACCOUNT_KEY);
+let serviceAccount = require('./private/serviceAccountKey.json');
+if (process.env.PORT) serviceAccount = process.env.SERVICE_ACCOUNT_KEY;
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount)
+});
+const db = admin.firestore();
 
+console.log("WHAT IS THE DB", db);
 
 // Express config
 const app = express();
@@ -35,8 +34,6 @@ app.listen(process.env.PORT || 4390, () => {
 // Set test route
 app.get('/', (req, res) => {
   console.log('Testing ping to server!');
-  console.log('HELLO WORLD');
-console.log('------------------SERVICE KEY', process.env.SERVICE_ACCOUNT_KEY);
   res.sendStatus(200);
 });
 
