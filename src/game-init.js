@@ -31,7 +31,6 @@ module.exports = function gameInit(app) {
     sendMessageToSlack(app.webhookURL, newGameMessage());
   });
 
-
   // Command: Start game
   app.post('/start-game', app.urlencodedParser, checkAdmin, (req, res) => {
     console.log('/start-game');
