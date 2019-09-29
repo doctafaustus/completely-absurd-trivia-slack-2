@@ -34,7 +34,9 @@ app.listen(process.env.PORT || 4390, () => {
 
 // Set test route
 app.get('/', (req, res) => {
-  console.log('Testing ping to server');
+  console.log('Testing ping to server!');
+  console.log('HELLO WORLD');
+console.log('------------------SERVICE KEY', process.env.SERVICE_ACCOUNT_KEY);
   res.sendStatus(200);
 });
 
