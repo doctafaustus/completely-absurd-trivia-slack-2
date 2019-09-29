@@ -9,28 +9,17 @@ module.exports = function(app, actionJSONPayload) {
   if (!user) return console.log('User answered but is not in game');
   if (user.answerValue) return console.log('User already submitted answer');
 
-  const currentQuestion = app.questions[app.game.currentQuestion];
+  const userAnswerNum = Number(actionJSONPayload.actions[0].value.match(/\d+/)[0]);
 
-  user.answerValue = actionJSONPayload.actions[0].value;
-  user.answerName = actionJSONPayload.actions[0].name;
-
-  console.log({
-    currentQuestion,
-    'user.answerValue': user.answerValue,
-    'user.answerName': user.answerName
-  });
-
-  const propValues = [];
-  Object.keys(currentQuestion).forEach(key => {
-    propValues.push(currentQuestion[key]);
-  });
-
-  if (propValues.indexOf(user.answerName) === -1) {
-    console.log('Something went wrong.');
+  // If the user's answer number is not the same as the current question then return
+  if (app.game.currentQuestion !== userAnswerNum) {
     user.answerName = 'no answer';
     return sendMessageToSlack(actionJSONPayload.response_url, { text: 'Too slow!', replace_original: false,
     response_type: 'ephemeral' });
-  }
+  } 
+
+  user.answerValue = actionJSONPayload.actions[0].value.match(/[a-d]/)[0];
+  user.answerName = actionJSONPayload.actions[0].name;
 
   const message = {
     text: `_You answered *${actionJSONPayload.actions[0].name}*._`,

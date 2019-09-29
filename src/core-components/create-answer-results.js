@@ -30,7 +30,7 @@ module.exports = function createAnswerResults(app, correctAnswer) {
   });
 
   const playerList = app.game.users.map(user => {
-    const guessedAnswer = user.answerName;
+    const guessedAnswer = (user.answerName === null) ? 'no answer' : user.answerName;
     const correctBold = user.wasCorrect ? '*' : '';
     return `     *${user.score}* ${correctBold}${user.name} _(${guessedAnswer})_${correctBold}`;
   }).join('\n');

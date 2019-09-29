@@ -35,6 +35,6 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
 // Set questions
-app.questions = require('./questions/qs-1.js');
+app.qs = require('./questions/qs-1.js');
 
 gameInit(app);

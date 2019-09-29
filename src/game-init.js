@@ -10,6 +10,7 @@ const questionGuess = require('./actions/question-guess');
 const newGameMessage = require('./messages/new-game-message.js');
 
 // Helpers
+const checkAdmin = require('./helpers/check-admin.js');
 const sendMessageToSlack = require('./helpers/send-message-to-slack.js');
 
 // Map actions functions to their slack IDs
@@ -22,7 +23,7 @@ const actionMap = {
 module.exports = function gameInit(app) {
 
   // Command: Create new game
-  app.post('/new-game', app.urlencodedParser, (req, res) => {
+  app.post('/new-game', app.urlencodedParser, checkAdmin, (req, res) => {
     console.log('/new-game');
     res.status(200).end();
   
@@ -32,7 +33,7 @@ module.exports = function gameInit(app) {
 
 
   // Command: Start game
-  app.post('/start-game', app.urlencodedParser, (req, res) => {
+  app.post('/start-game', app.urlencodedParser, checkAdmin, (req, res) => {
     console.log('/start-game');
     res.status(200).end();
 
@@ -52,6 +53,18 @@ module.exports = function gameInit(app) {
   });
 
 
+  // Command: Stop game
+  app.post('/stop-game', app.urlencodedParser, checkAdmin, (req, res) => {
+    console.log('/stop-game');
+    res.status(200).end();
+
+    if (app.game) {
+      app.game.stopped = true;
+      sendMessageToSlack(app.webhookURL, { text: 'Game cancelled' });
+    }
+  });
+
+
   // Handle all user actions
   app.post('/actions', app.urlencodedParser, (req, res) => {
     console.log('/actions');
@@ -59,6 +72,46 @@ module.exports = function gameInit(app) {
   
     const actionJSONPayload = JSON.parse(req.body.payload);
     actionMap[actionJSONPayload.callback_id](app, actionJSONPayload);
+  });
+
+
+  // Broadcast
+  app.post('/broadcast', app.urlencodedParser, checkAdmin, (req, res) => {
+    console.log('/broadcast');
+    res.status(200).end();
+
+    sendMessageToSlack(app.webhookURL, {
+      'attachments': [
+        {
+          'pretext': req.body.text,
+          'color': '#e20ec7',
+        }
+      ]
+    });
+  });
+
+
+  // Game alert
+  app.post('/game-alert', app.urlencodedParser, checkAdmin, (req, res) => {
+    console.log('/game-alert');
+    res.status(200).end();
+  
+    const splitMessage = req.body.text.split('+');
+    let formattedMessage = '';
+    splitMessage.forEach(item => {
+      formattedMessage += `${item.trim()}\n`;
+    });
+  
+    sendMessageToSlack(app.webhookURL, {
+      'attachments': [
+        {
+          'pretext': '<!channel> :megaphone: *Game Alert* :siren:\n',
+          'color': '#f24308',
+          'text': formattedMessage,
+          'mrkdwn_in': ['text', 'pretext']
+        }
+      ]
+    });
   });
 
 }

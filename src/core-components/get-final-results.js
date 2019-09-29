@@ -7,7 +7,7 @@ module.exports = function getFinalResults(app) {
 
   let perfectScoreObtained = false;
   const winners = app.game.users.filter(user => {
-    if (user.score === app.questions.length) perfectScoreObtained = true;
+    if (user.score === app.qs.questions.length) perfectScoreObtained = true;
     return user.score === highestScore;
   }).map(user => `<@${user.name}>`).join(', ');
 
@@ -15,7 +15,7 @@ module.exports = function getFinalResults(app) {
   if (perfectScoreObtained) {
     text = `:trophy: :completely-absurd-trivia: :trophy: *Congratulations* ${winners} - *PERFECT SCORE!* \n _Your gold jacket has been shipped!_ :gold-jacket:  :gold_star_for_you: :gold-jacket:  :gold_star_for_you: :gold-jacket:`;
   } else {
-    text = `Congratulations ${winners}! :party-wizard:`;
+    text = `*Congratulations* ${winners}! :party-wizard:`;
   }
 
   return { text };
