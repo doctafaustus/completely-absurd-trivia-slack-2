@@ -1,6 +1,7 @@
 // Game components
 const Game = require('./constructors/game-constructor.js');
 const nextQuestion = require('./core-components/next-question.js');
+const getLeaderboard = require('./leaderboard/get-leaderboard.js');
 
 // Actions
 const joinGame = require('./actions/join-game.js');
@@ -71,6 +72,14 @@ module.exports = function gameInit(app) {
   
     const actionJSONPayload = JSON.parse(req.body.payload);
     actionMap[actionJSONPayload.callback_id](app, actionJSONPayload);
+  });
+
+
+  app.post('/leaderboard', app.urlencodedParser, checkAdmin, (req, res) => {
+    console.log('/leaderboard');
+    res.status(200).end();
+
+    getLeaderboard(app);
   });
 
 
