@@ -1,8 +1,18 @@
 // Core modules
 const express = require('express');
-const request = require('request');
 const bodyParser = require('body-parser');
 const fs = require('fs');
+const admin = require('firebase-admin');
+
+// Cloudstore config
+// const serviceAccount = require('./private/serviceAccountKey.json');
+// const serviceAccount = process.env.SERVICE_ACCOUNT_KEY;
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount)
+// });
+// const db = admin.firestore();
+console.log(process.env.SERVICE_ACCOUNT_KEY);
+
 
 // Express config
 const app = express();
