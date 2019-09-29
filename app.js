@@ -6,7 +6,12 @@ const admin = require('firebase-admin');
 
 // Cloudstore config
 let serviceAccount = process.env.SERVICE_ACCOUNT_KEY;
-if (!process.env.PORT) serviceAccount = require('./private/serviceAccountKey.json');
+if (!process.env.PORT) {
+  serviceAccount = require('./private/serviceAccountKey.json');
+} else {
+  serviceAccount = JSON.parse(serviceAccount);
+}
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
 });
