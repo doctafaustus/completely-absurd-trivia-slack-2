@@ -11,7 +11,8 @@ const admin = require('firebase-admin');
 //   credential: admin.credential.cert(serviceAccount)
 // });
 // const db = admin.firestore();
-console.log(process.env.SERVICE_ACCOUNT_KEY);
+console.log('HELLO WORLD');
+console.log('------------------SERVICE KEY', process.env.SERVICE_ACCOUNT_KEY);
 
 
 // Express config
