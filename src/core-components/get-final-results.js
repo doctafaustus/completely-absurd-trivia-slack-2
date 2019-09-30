@@ -7,9 +7,15 @@ module.exports = function getFinalResults(app) {
 
   let perfectScoreObtained = false;
   const winners = app.game.users.filter(user => {
-    if (user.score === app.qs.questions.length) perfectScoreObtained = true;
+    if (user.score === app.qs.questions.length) {
+      user.perfectGame = true;
+      perfectScoreObtained = true;
+    }
     return user.score === highestScore;
-  }).map(user => `<@${user.name}>`).join(', ');
+  }).map(user => {
+    user.hasWon = true;
+    return `<@${user.name}>`;
+  }).join(', ');
 
   let text;
   if (perfectScoreObtained) {

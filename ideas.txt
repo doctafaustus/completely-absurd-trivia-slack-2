@@ -1,3 +1,123 @@
 Companion Chrome extension to force question to the bottom of chat window
 Image game
 Shop
+
+
+{
+  "nick": 148,
+  "kevinalbright": 270,
+  "haleymc": 164,
+  "bdf": 178,
+  "adam": 214,
+  "jlowe": 109,
+  "marcus": 72,
+  "joebumbulis": 119,
+  "jackie": 82,
+  "jessica": 103,
+  "dante": 120,
+  "john.rong": 227,
+  "joco": 152,
+  "libby": 82,
+  "elizabeth": 37,
+  "joshpyn": 186,
+  "mitch": 232,
+  "molly": 128,
+  "autumn": 221,
+  "chelsb": 128,
+  "troy": 99,
+  "joshua.jalaliani": 221,
+  "devon": 172,
+  "catherine.chiodo": 9,
+  "catherine": 22,
+  "carolyn": 136,
+  "shannon": 70,
+  "marion": 169,
+  "tomhanlon": 71,
+  "jenni": 41,
+  "abby": 16,
+  "tylerneusty": 172,
+  "mercan": 212,
+  "darice": 125,
+  "taylor": 66,
+  "brendan": 27,
+  "westrhodes": 121,
+  "seangardner": 157,
+  "james": 222,
+  "couv": 144,
+  "billy": 88,
+  "geoffk": 186,
+  "mark": 87,
+  "glynn": 15,
+  "tomi": 3,
+  "ricalaley": 18,
+  "brady": 133,
+  "ryang": 43,
+  "ryanabelman": 82,
+  "kendra": 90,
+  "ashley": 13,
+  "adrienne": 38,
+  "dan.cardamone": 12,
+  "kellee": 81,
+  "cara.daniels": 83,
+  "jane": 85,
+  "aaron": 28,
+  "jeremylindsley": 83,
+  "sarah.santa.cruz": 131,
+  "andrew": 75,
+  "jake": 11,
+  "kristen": 6,
+  "easy-e": 4,
+  "lynn.hunt": 72,
+  "azia.c.foster": 4,
+  "caitlin.checkett": 10,
+  "phillip.quintero": 93,
+  "drew": 3,
+  "anjali.satyu": 60,
+  "jenn": 17,
+  "brandon.thorly": 2,
+  "a.michelle.adams": 3,
+  "archana.jayakumar": 57,
+  "melissa": 38,
+  "lynn.a.hunt": 41,
+  "chris": 7,
+  "scarlett.r.sidwell": 7,
+  "ed_tomalin": 20,
+  "joelle.m.baldacci": 18,
+  "lauren.walker": 24,
+  "joshua.norris": 43,
+  "juan.b.reyes": 34,
+  "adrian.vargas": 3,
+  "elizabeth.damiano": 2,
+  "franck.b.hoffmann": 4,
+  "colby.riggle": 27,
+  "brandon.j": 6,
+  "nicholas.r.radcliffe": 12
+}
+
+PERFECT GAMES 
+ADAM: 2
+KEVIN: 3
+JALALIANI: 2
+JOHN.RONG: 1
+JOSHPYN: 1
+TYLER: 1
+GEOFF: 2
+MERCAN: 1
+MARION: 1
+JAMES: 1
+
+
+var scores = {};
+var raw = `
+
+`.split('\n');
+
+raw.forEach(line => {
+  line = line.trim();
+  if (!line.length) return;
+  var points = Number(line.match(/\d+/)[0]);
+  var player = line.match(/(\D+)\(/)[1].trim();
+  scores[player] = (scores[player]) ? scores[player] + points : points;  
+});
+
+console.log(scores);

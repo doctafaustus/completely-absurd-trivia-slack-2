@@ -1,39 +1,22 @@
-module.exports = function updateLeaderboard(app, users) {
+const getLeaderboard = require('./get-leaderboard.js');
 
-  const users = [
-    {
-      username: 'Ted',
-      hasWon: true,
-      points: 1,
-    }, {
-      username: 'Bob',
-      hasWon: false,
-      points: 8,
-    },
-    {
-      username: 'Jamie',
-      hasWon: true,
-      points: 111,
-    },
-    {
-      username: 'RalphieB',
-      hasWon: true,
-      points: 3,
-    },
-  ];
+module.exports = function updateLeaderboard(app) {
+
+  console.log('users', app.game.users);
 
   // Get all database users
   app.db.collection('leaderboard').get()
-  .then((snapshot) => {
+  .then(snapshot => {
     snapshot.forEach(doc => {
       const data = doc.data();
 
       // If the user already exists, save their information to our object
-      const user = users.find(user => user.username === data.username);
+      const user = app.game.users.find(user => user.name === data.username);
       if (user) {
         user.inDB = true;
         user.wins = (user.hasWon) ? data.wins + 1 : data.wins;
-        user.points = user.points + data.points;
+        user.points = user.score + data.points;
+        user.goldJackets = (user.perfectGame) ? data.goldJackets + 1 : data.goldJackets;
       }
     });
 
@@ -48,16 +31,19 @@ module.exports = function updateLeaderboard(app, users) {
   function updateUsers() {
     const batch = app.db.batch();
 
-    users.forEach(user => {
-      const ref = app.db.collection('leaderboard').doc(user.username);
+    app.game.users.forEach(user => {
+      const ref = app.db.collection('leaderboard').doc(user.name);
       batch.set(ref, {
-        username: user.username,
+        username: user.name,
         wins: user.inDB ? user.wins : (user.hasWon ? 1: 0),
-        points: user.points
+        points: user.inDB ? user.points : user.score,
+        goldJackets: user.inDB ? user.goldJackets : (user.perfectGame ? 1 : 0)
       });
     });
 
-    batch.commit();
+    batch.commit().then(() => {
+      getLeaderboard(app);
+    });
+    
   }
-
 }

@@ -6,6 +6,8 @@ module.exports = class User {
     this.answerText = null;
     this.answerName = 'no answer';
     this.wasCorrect = false;
+    this.hasWon = false;
+    this.perfectGame = false;
   }
 
 }

@@ -4,6 +4,7 @@ const resetAnswers = require('../core-components/reset-answers.js');
 const getFinalResults = require('../core-components/get-final-results.js');
 const sendMessageToSlack = require('../helpers/send-message-to-slack.js');
 const questionMessage = require('../messages/question-message.js');
+const updateLeaderboard = require('../leaderboard/update-leaderboard.js');
 
 module.exports = function nextQuestion(app) {
   if (app.game.stopped) return;
@@ -26,14 +27,15 @@ module.exports = function nextQuestion(app) {
       setTimeout(() => {
         const finalResults = getFinalResults(app);
         sendMessageToSlack(app.webhookURL, finalResults);
-      }, 3000);
+        updateLeaderboard(app);
+      }, 2000);
 
     } else {
 
       setTimeout(() => {
         resetAnswers(app);
         nextQuestion(app);
-      }, 4000);
+      }, 3000);
 
     }
   }, 6000);

@@ -35,10 +35,10 @@ module.exports = function getLeaderboard(app) {
       return {
         'Wins': user.wins,
         'Player': user.username,
-        'Total Points': user.points
+        'Total Pts.': user.points,
+        'Gold Jackets': user.goldJackets
       };
     });
   }
 
-  
 }

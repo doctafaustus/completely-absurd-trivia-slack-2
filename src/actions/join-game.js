@@ -15,7 +15,7 @@ module.exports = function joinGame(app, actionJSONPayload) {
   // See if user is already in game
   if (app.game.getUser(username)) {
     return sendMessageToSlack(actionJSONPayload.response_url, { 
-      text: 'You\'re in the game already!',
+      text: 'You\'re already in the game!',
       replace_original: false,
       response_type: 'ephemeral'
     });
