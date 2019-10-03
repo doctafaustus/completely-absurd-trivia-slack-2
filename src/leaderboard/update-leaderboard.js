@@ -2,8 +2,6 @@ const getLeaderboard = require('./get-leaderboard.js');
 
 module.exports = function updateLeaderboard(app) {
 
-  console.log('users', app.game.users);
-
   // Get all database users
   app.db.collection('leaderboard').get()
   .then(snapshot => {
