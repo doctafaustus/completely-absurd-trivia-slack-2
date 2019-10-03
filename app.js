@@ -43,7 +43,6 @@ app.get('/', (req, res) => {
 
 
 // Webhook URLs
-const devURL = process.env.devURL;
 const prodSecretURL = process.env.PORT ? process.env.prodSecretURL : fs.readFileSync(`${__dirname}/private/webhook.txt`).toString();
 const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;

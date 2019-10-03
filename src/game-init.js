@@ -49,7 +49,7 @@ module.exports = function gameInit(app) {
 
     setTimeout(() => {
       nextQuestion(app);
-    }, 2000);
+    }, 5000);
   });
 
 

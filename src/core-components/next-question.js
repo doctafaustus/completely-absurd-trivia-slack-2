@@ -12,6 +12,7 @@ module.exports = function nextQuestion(app) {
   const message = questionMessage(app);
   sendMessageToSlack(app.webhookURL, message);
   
+  // Wait for users to guess
   setTimeout(() => {
     if (app.game.ended || app.game.stopped) return console.log('Not evaluating answers - game has stopped');
 
@@ -24,20 +25,22 @@ module.exports = function nextQuestion(app) {
     // Send next question or send final results
     if (app.game.ended) {
 
+      // Send congratulations message
       setTimeout(() => {
         const finalResults = getFinalResults(app);
         sendMessageToSlack(app.webhookURL, finalResults);
         updateLeaderboard(app);
-      }, 2000);
+      }, 3000);
 
     } else {
 
+      // Send next question
       setTimeout(() => {
         resetAnswers(app);
         nextQuestion(app);
-      }, 3000);
+      }, 8500);
 
     }
-  }, 6000);
+  }, 15000);
 
 }

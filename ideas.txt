@@ -119,5 +119,3 @@ raw.forEach(line => {
   var player = line.match(/(\D+)\(/)[1].trim();
   scores[player] = (scores[player]) ? scores[player] + points : points;  
 });
-
-console.log(scores);
