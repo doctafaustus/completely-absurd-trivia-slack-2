@@ -37,53 +37,59 @@ module.exports = {
       d: 'Steve Aoki',
       answer: 'b'
     },
-    // {
-    //   question: '', 
-    //   a: '',
-    //   b: '',
-    //   c: '',
-    //   d: '',
-    //   answer: ''
-    // },
-    // {
-    //   question: '', 
-    //   a: '',
-    //   b: '',
-    //   c: '',
-    //   d: '',
-    //   answer: ''
-    // },
-    // {
-    //   question: '', 
-    //   a: '',
-    //   b: '',
-    //   c: '',
-    //   d: '',
-    //   answer: ''
-    // },
-    // {
-    //   question: '', 
-    //   a: '',
-    //   b: '',
-    //   c: '',
-    //   d: '',
-    //   answer: ''
-    // },
-    // {
-    //   question: '', 
-    //   a: '',
-    //   b: '',
-    //   c: '',
-    //   d: '',
-    //   answer: ''
-    // },
-    // {
-    //   question: '', 
-    //   a: '',
-    //   b: '',
-    //   c: '',
-    //   d: '',
-    //   answer: ''
-    // },
+    {
+      question: 'Who is this?',
+      imageURL: 'https://www.biography.com/.image/ar_1:1%2Cc_fill%2Ccs_srgb%2Cg_face%2Cq_auto:good%2Cw_300/MTY1NTY5NTAxMzIzMDc2ODUz/a-g-bell.jpg', 
+      a: 'Alexander Graham Bell',
+      b: 'Walt Whitman',
+      c: 'Charles Dickens',
+      d: 'E.E. Cummings',
+      answer: 'a'
+    },
+    {
+      question: 'Who is this?',
+      imageURL: 'https://ionenewsone.files.wordpress.com/2015/09/14267055452223.jpg', 
+      a: 'Beverly Johnson',
+      b: 'Jessica White',
+      c: 'Tyra Banks',
+      d: 'Vanessa Williams',
+      answer: 'd'
+    },
+    {
+      question: 'Who is this?',
+      imageURL: 'https://vignette.wikia.nocookie.net/dragonball/images/5/5b/Gokusteppingoutofaspaceship.jpg', 
+      a: 'Goku',
+      b: 'Vegeta',
+      c: 'Krillin',
+      d: 'Gohan',
+      answer: 'a'
+    },
+    {
+      question: 'Who is this?',
+      imageURL: 'https://vignette.wikia.nocookie.net/tmnt/images/9/91/Shredder_movie.jpg',  
+      a: 'Splinter',
+      b: 'Shredder',
+      c: 'Krang',
+      d: 'Cobra',
+      answer: 'b'
+    },
+    {
+      question: 'Who is this?',
+      imageURL: 'https://cdn1us.denofgeek.com/sites/denofgeekus/files/styles/main_wide/public/2019/01/power-rangers-tommy-original-name.jpg', 
+      a: 'Jason',
+      b: 'Billy',
+      c: 'Tommy',
+      d: 'Zack',
+      answer: 'c'
+    },
+    {
+      question: 'Who is this?',
+      imageURL: 'https://vignette.wikia.nocookie.net/seinfeld/images/8/8c/Leo.jpg', 
+      a: 'Jerry',
+      b: 'Morty',
+      c: 'Uncle George',
+      d: 'Uncle Leo',
+      answer: 'd'
+    },
   ]
 };
