@@ -40,7 +40,8 @@ module.exports = function updateLeaderboard(app) {
     });
 
     batch.commit().then(() => {
-      getLeaderboard(app);
+      // Immediately show leaderboard after game end if desired
+      // getLeaderboard(app);
     });
     
   }

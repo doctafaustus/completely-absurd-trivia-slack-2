@@ -41,6 +41,6 @@ module.exports = function nextQuestion(app) {
       }, 8500);
 
     }
-  }, 15000);
+  }, 14000);
 
 }
