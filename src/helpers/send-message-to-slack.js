@@ -11,6 +11,10 @@ module.exports = function sendMessageToSlack(responseURL, JSONmessage) {
   };
 
   request(postOptions, (error, response, body) => {
-    if (error) throw error;
+    if (error) {
+      console.log(`ERROR! - ${JSONmessage}`);
+      console.log(`Error response - ${response}`);
+      throw error;
+    }
   });
 }
