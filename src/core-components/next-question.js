@@ -36,6 +36,7 @@ module.exports = function nextQuestion(app) {
 
       // Send next question
       setTimeout(() => {
+        console.log('next question timeout');
         resetAnswers(app);
         nextQuestion(app);
       }, 8500);
