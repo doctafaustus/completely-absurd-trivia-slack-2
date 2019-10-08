@@ -44,8 +44,9 @@ app.get('/', (req, res) => {
 
 // Webhook URLs
 const prodSecretURL = process.env.PORT ? process.env.prodSecretURL : fs.readFileSync(`${__dirname}/private/webhook.txt`).toString();
+const catv2URL = process.env.catv2URL
 const prodRealURL = process.env.prodRealURL;
-app.webhookURL = prodSecretURL;
+app.webhookURL = catv2URL;
 
 // Set questions
 app.qs = require('./questions/qs-1.js');
