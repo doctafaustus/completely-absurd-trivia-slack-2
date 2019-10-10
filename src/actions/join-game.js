@@ -1,5 +1,6 @@
 // Game components
 const User = require('../constructors/user-constructor.js');
+const getOpener = require('../messages/get-opener.js');
 
 // Helpers
 const sendMessageToSlack = require('../helpers/send-message-to-slack.js');
@@ -23,6 +24,9 @@ module.exports = function joinGame(app, actionJSONPayload) {
 
   // Push user into game's user list
   app.game.users.push(new User(username));
-  sendMessageToSlack(app.webhookURL, { text: `_${username} is in!_` });
+
+  let opener = getOpener();
+  if (username === 'autumn') opener = 'is playing with wood';
+  sendMessageToSlack(app.webhookURL, { text: `_${username} ${opener}_` });
 
 }

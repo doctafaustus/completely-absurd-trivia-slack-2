@@ -9,7 +9,7 @@ module.exports = function createAnswerResults(app, correctAnswer) {
   });
 
   const ratio = `${correctUsers.length}/${app.game.users.length}`;
-  const percentage = `${(correctUsers.length / app.game.users.length) * 100}`;
+  const percentage = `${Math.round((correctUsers.length / app.game.users.length) * 100)}`;
   const resultSummary = `\`${ratio} (${percentage}%)\``;
 
   if (!correctUsers.length) {

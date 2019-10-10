@@ -1,6 +1,5 @@
 module.exports = function questionMessage(app) {
 
-
   const questionObj = app.qs.questions[app.game.currentQuestion];
   console.log(`---------------------> Sending question: ${app.game.currentQuestion + 1}`);
   const message = {
