@@ -67,7 +67,6 @@ module.exports = function gameInit(app) {
 
   // Handle all user actions
   app.post('/actions', app.urlencodedParser, (req, res) => {
-    console.log('/actions');
     res.status(200).end();
   
     const actionJSONPayload = JSON.parse(req.body.payload);
