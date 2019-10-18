@@ -12,7 +12,7 @@ module.exports = {
     },
     {
       question: 'Guess the movie.',
-      imageURL: 'https://i.ibb.co/rv8w8Zq/tatooine.png', 
+      imageURL: 'https://i.ibb.co/y8mFYj0/tatooine-1.png', 
       a: 'Three Kings',
       b: 'Star Wars',
       c: 'Mad Max 2',
@@ -39,7 +39,7 @@ module.exports = {
     },
     {
       question: 'Guess the movie.',
-      imageURL: 'https://i.ibb.co/Gx9CCXX/tdc.png', 
+      imageURL: 'https://i.ibb.co/DDxjtV0/tdc-1.png', 
       a: 'The Witches',
       b: 'Labyrinth',
       c: 'The Dark Crystal',
@@ -48,7 +48,7 @@ module.exports = {
     },
     {
       question: 'Guess the movie.',
-      imageURL: 'https://i.ibb.co/0jypgCS/fotn.png', 
+      imageURL: 'https://i.ibb.co/K5BJMrN/fotn-1.png', 
       a: 'Flight of the Navigator',
       b: 'The Last Starfighter',
       c: 'The Neverending Story',
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       question: 'Guess the movie.',
-      imageURL: 'https://i.ibb.co/MZG3YDH/ffd.png', 
+      imageURL: 'https://i.ibb.co/QpBKYjy/ffd-1.png', 
       a: 'Couples Retreat',
       b: '50 First Dates',
       c: 'The Break-Up',
@@ -75,7 +75,7 @@ module.exports = {
     },
     {
       question: 'Guess the movie.',
-      imageURL: 'https://i.ibb.co/s2VPdsV/homealone.png', 
+      imageURL: 'https://i.ibb.co/CQjKrLR/homealone-1.png', 
       a: 'Jack Frost',
       b: 'The Santa Clause',
       c: 'Home Alone',
@@ -84,7 +84,7 @@ module.exports = {
     },
     {
       question: 'Guess the movie.',
-      imageURL: 'https://i.ibb.co/0CjN419/metropolis.png', 
+      imageURL: 'https://i.ibb.co/6D9Vn5v/metropolis-1.png', 
       a: 'Phantom',
       b: 'Destiny',
       c: 'Woman in the Moon',
