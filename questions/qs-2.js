@@ -18,7 +18,7 @@ module.exports = {
       answer: 'a'
     },
     {
-      question: 'In the classic board game Candy Land, what is the name of the king who rules the Candy Castle?', 
+      question: 'In the classic board game "Candy Land," what is the name of the king who rules the Candy Castle?', 
       a: 'King Jolly', 
       b: 'King Gumdrop',
       c: 'King Kandy',
@@ -50,11 +50,11 @@ module.exports = {
       answer: 'b'
     },
     {
-      question: 'What is the name of a trait that is expressed whenever it is present in DNA?', 
-      a: 'Recessive', 
-      b: 'Expressive',
-      c: 'Dominant',
-      d: 'Inheritive',
+      question: 'A unit of hereditary information is also known as...', 
+      a: 'DNA', 
+      b: 'Allele',
+      c: 'Gene',
+      d: 'Chromosome',
       answer: 'c'
     },
     {
@@ -74,7 +74,7 @@ module.exports = {
       answer: 'a'
     },
     {
-      question: '#000000 is the hex code for what color?', 
+      question: '#000 is the shorthand hex code for what color?', 
       a: 'Red', 
       b: 'White',
       c: 'Black',
