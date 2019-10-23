@@ -26,7 +26,7 @@ module.exports = {
       answer: 'c'
     },
     {
-      question: '', 
+      question: ' ', 
       a: '', 
       b: '',
       c: '',
