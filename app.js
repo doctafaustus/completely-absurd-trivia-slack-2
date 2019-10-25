@@ -52,5 +52,3 @@ app.webhookURL = prodRealURL;
 app.qs = require('./questions/qs-halloween.js');
 
 gameInit(app);
-
-
