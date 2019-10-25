@@ -23,7 +23,7 @@ module.exports = {
       b: 'Sleepy Hollow NY',
       c: 'Chicago IL',
       d: 'New York City',
-      answer: ''
+      answer: 'd'
     },
     {
       question: 'What does the English word "hallow" mean?', 
@@ -42,7 +42,7 @@ module.exports = {
       answer: 'd'
     },
     {
-      question: 'In foklore, a "lycanthrope" is another name for what?', 
+      question: 'In folklore, a "lycanthrope" is another name for what?', 
       a: 'Dracula', 
       b: 'Werewolf',
       c: 'Witch',
@@ -55,10 +55,10 @@ module.exports = {
       b: 'Day of the Dead',
       c: 'House of 1000 Corpses',
       d: 'White Zombie',
-      answer: ''
+      answer: 'd'
     },
     {
-      question: '"The Killer Clown" serial killed was also named "____ the Clown?"', 
+      question: '"The Killer Clown" serial killer was also named "____ the Clown?"', 
       a: 'Eric', 
       b: 'Pogo',
       c: 'Bozo',
@@ -66,7 +66,7 @@ module.exports = {
       answer: 'b'
     },
     {
-      question: 'Which artist covered the song "This is Halloween" in 2006 for the The Nighmare Before Christmas\'s special edition soundtrack reissue?', 
+      question: 'Which artist covered the song "This is Halloween" in 2006 for the The Nighmare Before Christmas\' special edition soundtrack reissue?', 
       a: 'Fallout Boy', 
       b: 'Pantera',
       c: 'Marilyn Manson',
@@ -74,7 +74,7 @@ module.exports = {
       answer: 'c'
     },
     {
-      question: 'The Whitechapel murders who done by who?', 
+      question: 'The Whitechapel murders were done by who?', 
       a: 'Sweeney Todd', 
       b: 'Jack the Ripper',
       c: 'Samuel Mason',

@@ -29,7 +29,7 @@ module.exports = function nextQuestion(app) {
       setTimeout(() => {
         const finalResults = getFinalResults(app);
         sendMessageToSlack(app.webhookURL, finalResults);
-        //updateLeaderboard(app);
+        updateLeaderboard(app);
       }, 2000);
 
     } else {
