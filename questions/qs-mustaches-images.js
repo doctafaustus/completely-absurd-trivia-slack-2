@@ -30,10 +30,10 @@ module.exports = {
     },
     {
       question: 'Whose mustache is this?',
-      imageURL: 'ttps://i.ibb.co/QYBcjKg/mustache4-2.png', 
+      imageURL: 'https://i.ibb.co/QYBcjKg/mustache4-2.png', 
       a: 'Danny Trejo',
       b: 'Luis Guzman',
-      c: 'Ricardo Montalbán',
+      c: 'Ricardo Montalban',
       d: 'Edward James Olmos',
       answer: 'd'
     },
@@ -41,7 +41,7 @@ module.exports = {
       question: 'Whose mustache is this?',
       imageURL: 'https://i.ibb.co/zJ4fG9V/mustache5.png', 
       a: 'Henry Cavill',
-      b: 'ames Marsden',
+      b: 'James Marsden',
       c: 'Jamie Dornan',
       d: 'Matt Bomer',
       answer: 'd'
