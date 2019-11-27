@@ -50,6 +50,6 @@ app.webhookURL = prodRealURL;
 
 // Set questions
 //qs-james-thanksgiving-images.js
-app.qs = require('./questions/qs-james-thanksgiving.js');
+app.qs = require('./questions/qs-james-thanksgiving-images.js');
 
 gameInit(app);
