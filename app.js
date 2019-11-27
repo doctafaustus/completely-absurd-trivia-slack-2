@@ -49,6 +49,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodRealURL;
 
 // Set questions
-app.qs = require('./questions/qs-mustaches-images.js');
+//qs-james-thanksgiving-images.js
+app.qs = require('./questions/qs-james-thanksgiving.js');
 
 gameInit(app);
