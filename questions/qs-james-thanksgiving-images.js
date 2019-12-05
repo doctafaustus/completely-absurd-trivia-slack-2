@@ -11,10 +11,10 @@ module.exports = {
       answer: 'a'
     },
     {
-      question: 'Who played this Santa? :gogobdf:',
+      question: 'Who played this Santa?',
       imageURL: 'https://www.larutadelsorigens.cat/wallpic/full/44-448743_nightmare-before-christmas-wallpaper-jack-skellington-as-santa.jpg', 
       a: 'Tim Burton',
-      b: 'Johnny Depp :poop:',
+      b: 'Johnny Depp',
       c: 'Chris Sarandon',
       d: 'Susan Sarandon',
       answer: 'c'
