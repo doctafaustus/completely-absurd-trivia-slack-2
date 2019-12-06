@@ -14,7 +14,7 @@ module.exports = {
       a: '570 ft', 
       b: '722 ft',
       c: '836 ft',
-      d: '1012 ft',
+      d: '1,012 ft',
       answer: 'c'
     },
     {
@@ -60,7 +60,7 @@ module.exports = {
     {
       question: 'rock star george harrison\'s song "layla" is about', 
       a: 'queen elizabeth', 
-      b: 'his cousin with whom he had an unhealthy relationship',
+      b: 'his cousin',
       c: 'george harrison\'s wife',
       d: 'his high school crush',
       answer: 'c'
