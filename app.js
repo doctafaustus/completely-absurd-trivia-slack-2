@@ -50,6 +50,6 @@ app.webhookURL = prodSecretURL;
 
 // Set questions
 //qs-james-thanksgiving-images.js
-app.qs = require('./questions/qs-james-thanksgiving-images.js');
+app.qs = require('./questions/qs-mark-text.js');
 
 gameInit(app);
