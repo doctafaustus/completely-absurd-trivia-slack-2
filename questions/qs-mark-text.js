@@ -27,18 +27,18 @@ module.exports = {
     },
     {
       question: 'in 1999, civil engineer david phillips earned over one million airline miles by', 
-      a: 'taking 61 round trip flights from los angeles to sydney', 
-      b: 'winning a televised game show sponsored by an airline',
-      c: 'settling a lawsuit with an airline company',
+      a: 'taking 61 round trip flights', 
+      b: 'winning a tv game show',
+      c: 'settling lawsuit w/ airline company',
       d: 'buying 12000 cups of pudding',
       answer: 'd'
     },
     {
       question: 'the los angeles dodgers\' team name refers to', 
-      a: 'people jumping out of the way of streetcars', 
+      a: 'people avoiding streetcars', 
       b: 'avoiding the military draft',
-      c: 'the auto company that originally owned the team',
-      d: 'corndodgers, the cake made of indian corn and wrapped in husks',
+      c: 'car company that owned them',
+      d: 'a food called corndodgers',
       answer: 'a'
     },
     {

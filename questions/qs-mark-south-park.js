@@ -76,7 +76,7 @@ module.exports = {
     {
       question: 'in a halloween episode, spooky vision refers to', 
       a: 'goggles that make ghosts appear', 
-      b: 'barbara streissand\'s face in the corners of the screen',
+      b: 'barbara streissand\'s face',
       c: 'paris hilton under a black light',
       d: 'being hipnotized by lasers',
       answer: 'b'
