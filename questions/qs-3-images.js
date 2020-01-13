@@ -83,7 +83,7 @@ module.exports = {
       answer: 'a'
     },
     {
-      question: 'This mascot belong to which city\'s baseball team?',
+      question: 'This mascot belongs to which city\'s baseball team?',
       imageURL: 'https://i.ibb.co/wNMTVyx/Screen-Shot-2020-01-13-at-3-01-31-PM.png', 
       a: 'Atlanta',
       b: 'Minnesota',
