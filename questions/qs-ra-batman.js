@@ -6,7 +6,7 @@ module.exports = {
       a: 'Bruce Wayne Sr.', 
       b: 'John Wayne Gacy',
       c: 'Thomas Wayne',
-      d: 'James Wayne',
+      d: 'Lil Wayne',
       answer: 'c'
     },
     {
