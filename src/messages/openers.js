@@ -1,4 +1,6 @@
 module.exports = [
+  'saved RG from an aggressive piece of lettuce',
+  'threw a chair at a cell phone bandit',
   'got a kidney stone at a client onsite',
   'fell asleep during a client onsite kickoff',
   'gave a farewell speech at huddle about the etymology of "courage"',
