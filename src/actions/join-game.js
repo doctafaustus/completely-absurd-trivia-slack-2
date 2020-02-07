@@ -27,6 +27,7 @@ module.exports = function joinGame(app, actionJSONPayload) {
 
   let opener = getOpener();
   if (username === 'autumn') opener = 'is playing with wood';
+  if (username === 'joco') opener = 'was found sleeping pantsless under the HQ1 couch after the holiday party';
   sendMessageToSlack(app.webhookURL, { text: `_${username} ${opener}_` });
 
 }
