@@ -49,6 +49,6 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
 // Set questions
-app.qs = require('./questions/qs-tyler-name-the-movie.js');
+app.qs = require('./questions/qs-tyler-dune.js');
 
 gameInit(app);
