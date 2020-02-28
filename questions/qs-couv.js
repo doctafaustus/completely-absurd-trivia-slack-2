@@ -1,7 +1,3 @@
-// Answer text must be under 25 characters otherwise they'll be truncated
-// Answer value but be the lowercase LETTER of the correct answer (a, b, c, or d)
-// Sixpence None The Richer Trivia by Couv
-​
 module.exports = {
   gameType: 'question',
   questions: [
@@ -15,7 +11,7 @@ module.exports = {
       answer: 'c'
     },
     {
-      question: 'The \"S\" in C.S. Lewis\' name stands for:',
+      question: 'The "S" in C.S. Lewis\' name stands for:',
       imageURL: 'https://i.ibb.co/n1FCxpP/2.jpg', 
       a: 'Samuel',
       b: 'Sixpence',
@@ -42,7 +38,7 @@ module.exports = {
       answer: 'a'
     },
     {
-      question: 'In what year did \"Kiss Me\" hit #1 of Billboard\'s Top 40?',
+      question: 'In what year did "Kiss Me" hit #1 of Billboard\'s Top 40?',
       imageURL: 'https://i.ibb.co/Cwfz4My/5.jpg', 
       a: '1996',
       b: '1997',
