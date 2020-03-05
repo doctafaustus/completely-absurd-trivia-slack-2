@@ -3,7 +3,7 @@ module.exports = {
   questions: [
     {
       question: 'How much is this man squid hat?',
-      imageURL: 'https://www.dropbox.com/s/ifedrh9f1pxvta3/mansquid.png', 
+      imageURL: 'https://uce5ac772ee47767383c4d9087d7.previews.dropboxusercontent.com/p/thumb/AAv5UzvFCmVVGY5KskH4eSKX1IMnuaqSJz7OICkY0w2_V3eb_jOjiK9pT9uyP_zPJMlqU3c_vxqJEqw2XE_Z2glidPrFKxmVCWzO10mubL2kjJ3ZYtR3cEMR_Zixk2EvwFxTd0ewAlMM9OJlPSmfYzF9kQeGg3VYyb4Lrizy6dyEYydVEQmMfbBDwwdZaxh1ED0qV2Up1AW532zyCVoAXoCMPgPlKe5QJjHBh6g7UUqxPMofhBOXFXX9fg8KoFdc-i791f6rpn5qi0BLr2oNmRU6hWELfPO2SzG3YUNe4BZ5v9XuKfgASyykBVGaR4nTgNzW407qoNRg0b0Z54a9QbKUEBAcY9QJBzywfRc3xkWuu_D7Yng3FkUh-wqv2HizOLqmpoz2h2J4AIrnqFAmpoLo/p.png', 
       a: '$5',
       b: '$15',
       c: '$30',
