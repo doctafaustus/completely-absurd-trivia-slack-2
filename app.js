@@ -49,7 +49,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
 // Set questions
-app.qs = require('./questions/qs-archana.js');
+app.qs = require('./questions/qs-mark-pandemic.js');
 
 
 gameInit(app);
