@@ -14,7 +14,7 @@ module.exports = {
       answer: 'b'
     },
     {
-      question: '"Did you know I was part of a gang called the Mouse Ball Bandits."', 
+      question: '"Did you know I was part of a gang called the Mouse Ball Bandits?"', 
       a: 'Adam', 
       b: 'Billy',
       c: 'Taylor',
@@ -62,7 +62,7 @@ module.exports = {
       answer: 'a'
     },
     {
-      question: '"I can\'t quit you, Jane" ', 
+      question: '"I can\'t quit you, Jane."', 
       a: 'Phillip', 
       b: 'Juan',
       c: 'Dan',
