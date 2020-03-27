@@ -49,7 +49,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodRealURL;
 
 // Set questions
-app.qs = require('./questions/qs-ssc.js');
+app.qs = require('./questions/qs-who-said-it.js');
 
 
 gameInit(app);
