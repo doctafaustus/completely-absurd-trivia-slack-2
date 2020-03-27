@@ -21,7 +21,7 @@ module.exports = function getFinalResults(app) {
   if (perfectScoreObtained) {
     text = `:trophy: :completely-absurd-trivia: :trophy: *Congratulations* ${winners} - *PERFECT SCORE!* \n _Your gold jacket has been shipped!_ :gold-jacket:  :gold_star_for_you: :gold-jacket:  :gold_star_for_you: :gold-jacket:`;
   } else {
-    text = `*Congratulations* ${winners}! :party-wizard:`;
+    text = `*Congratulations* ${winners}! :wizard-mic-drop:`;
   }
 
   return { text };
