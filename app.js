@@ -51,5 +51,4 @@ app.webhookURL = prodRealURL;
 // Set questions
 app.qs = require('./questions/qs-adam-2.js');
 
-
 gameInit(app);
