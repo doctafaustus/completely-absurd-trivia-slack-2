@@ -48,7 +48,7 @@ module.exports = {
     },
     {
       question: 'which movie was it?',
-      imageURL: 'https://d2j1wkp1bavyfs.cloudfront.net/wp-content/uploads/2019/04/Major-League-1989-sports-movies-23262040-1280-720.jpg', 
+      imageURL: 'https://i.ibb.co/wz6WJV3/Major-League-1989-sports-movies-23262040-1280-720-1.jpg', 
       a: 'major league',
       b: 'major league two',
       c: 'major league: back to the minors',
@@ -57,7 +57,7 @@ module.exports = {
     },
     {
       question: 'which movie was it?',
-      imageURL: 'https://m.media-amazon.com/images/M/MV5BOWY2YWFkZWItZmI3NS00NDIxLTkwYzEtYjdlZGY0YTJjYThhXkEyXkFqcGdeQXVyNTkyODcwNjc@._V1_.jpg', 
+      imageURL: 'https://i.ibb.co/RPwvpqN/MV5-BOWY2-YWFk-ZWIt-Zm-I3-NS00-NDIx-LTkw-Yz-Et-Yjdl-ZGY0-YTJj-YThh-Xk-Ey-Xk-Fqc-Gde-QXVy-NTky-ODcw-Njc-V1-1.jpg', 
       a: 'bull durham',
       b: 'the natural',
       c: 'mr baseball',
@@ -66,7 +66,7 @@ module.exports = {
     },
     {
       question: 'which movie was it?',
-      imageURL: 'https://resizing.flixster.com/vCKVI4weUnOXyOEQQsMa1WEI9ME=/300x300/v1.aDsyNjU4O2o7MTgzNjA7MTIwMDs3MDA7NDU2', 
+      imageURL: 'https://i.ibb.co/bQqnSWz/Z1p6A9k.png', 
       a: 'the sandlot',
       b: 'the benchwarmers',
       c: 'fever pitch',
@@ -75,16 +75,16 @@ module.exports = {
     },
     {
       question: 'which movie was it?',
-      imageURL: 'https://www.themoviescene.co.uk/reviews/_img/2873-2.jpg', 
+      imageURL: 'https://i.ibb.co/RDS2kHy/2873-2-1.jpg', 
       a: 'mr 3000',
       b: 'mr baseball',
       c: 'major league 2',
       d: 'field of dreams',
-      answer: ''
+      answer: 'a'
     },
     {
       question: 'which movie was it?',
-      imageURL: 'https://m.media-amazon.com/images/M/MV5BOWUwYjVjMDYtMmUzOC00ZTNlLTkwMTYtODJiZGFjNTA5ZjlmXkEyXkFqcGdeQXVyMjk3NTUyOTc@._V1_.jpg', 
+      imageURL: 'https://i.ibb.co/Jjb56H1/MV5-BOWUw-Yj-Vj-MDYt-Mm-Uz-OC00-ZTNl-LTkw-MTYt-ODJi-ZGFj-NTA5-Zjlm-Xk-Ey-Xk-Fqc-Gde-QXVy-Mjk3-NTUy-OTc-V1-1.jpg', 
       a: 'bingo long',
       b: 'field of dreams',
       c: 'the sandlot',
