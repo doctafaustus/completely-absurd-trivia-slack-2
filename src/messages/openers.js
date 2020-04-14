@@ -6,7 +6,7 @@ module.exports = [
   'was right to stock up on toilet paper',
   'regularly supports small businesses', 
   'has been working on a 5000 piece jigsaw puzzle',
-  'is known crack a beer at lunch', 
+  'is known to crack a beer at lunch', 
   'has been stress eating lately', 
   'has a business stake in hydroxychloroquine',
   'rates their handling of this pandemic as a 10',
