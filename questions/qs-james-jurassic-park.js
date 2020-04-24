@@ -67,7 +67,7 @@ module.exports = {
     },
     {
       question: 'Jurassic Park was the 2nd highest grossing film of the 20th century behind what film?', 
-      a: 'E.T.', 
+      a: 'ET', 
       b: 'The Godfather',
       c: 'Titanic',
       d: 'Schindlers List',
