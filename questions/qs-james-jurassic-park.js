@@ -74,7 +74,7 @@ module.exports = {
       a: 'E.T.', 
       b: 'The Godfather',
       c: 'Titanic',
-      d: 'Schindler\'s List',
+      d: 'Schindlers List',
       answer: 'c'
     },
     {
