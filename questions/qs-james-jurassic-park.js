@@ -1,7 +1,3 @@
-// Answer text must be under 25 characters otherwise they'll be truncated
-// Answer value but be the lowercase LETTER of the correct answer (a, b, c, or d)
-// All games must be 10 questions - do not delete any!
-​
 module.exports = {
   gameType: 'text',
   questions: [
@@ -9,7 +5,7 @@ module.exports = {
       question: 'Who wrote the novel Jurassic Park?', 
       a: 'John Grisham', 
       b: 'Michael Chrichton',
-      c: 'J.K. Rowling',
+      c: 'JK Rowling',
       d: 'Ian Malcom',
       answer: 'b'
     },
@@ -40,7 +36,7 @@ module.exports = {
     {
       question: 'What actual sound was used for the T Rex\'s footsteps?', 
       a: 'Large bass drum hits', 
-      b: 'A guy going "GOOOSZH"',
+      b: 'A guy going GOOOSZH',
       c: 'Explosive devices going off',
       d: 'Cut sequoias crashing to the ground',
       answer: 'd'
