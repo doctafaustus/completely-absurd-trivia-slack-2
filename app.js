@@ -49,7 +49,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodRealURL;
 
 // Set questions
-app.qs = require('./questions/qs-jane.js');
+app.qs = require('./questions/qs-james-jurassic-park.js');
 
 
 gameInit(app);
