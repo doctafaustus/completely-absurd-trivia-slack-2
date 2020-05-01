@@ -49,7 +49,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodRealURL;
 
 // Set questions
-app.qs = require('./questions/qs-flags.js');
+app.qs = require('./questions/qs-josh.js');
 
 
 gameInit(app);
