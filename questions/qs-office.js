@@ -62,7 +62,7 @@ module.exports = {
     },
     {
       question: 'Who enjoys meme puzzles and lego kits?',
-      imageURL: 'hhttps://i.ibb.co/5kkLxNR/game-7-1.jpg',
+      imageURL: 'https://i.ibb.co/5kkLxNR/game-7-1.jpg',
       a: 'Kevin',
       b: 'Marion',
       c: 'Catherine',
