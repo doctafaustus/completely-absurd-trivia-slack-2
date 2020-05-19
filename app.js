@@ -49,7 +49,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
 // Set questions
-app.qs = require('./questions/qs-mark-text3.js.js');
+app.qs = require('./questions/qs-mark-text3.js');
 
 
 gameInit(app);
