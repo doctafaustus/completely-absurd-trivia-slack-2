@@ -39,10 +39,10 @@ module.exports = {
     },
     {
       question: 'What is notoriously difficult about making a Ramos Gin Fizz?', 
-      a: 'It requires dry ice', 
-      b: 'It requires freshly-carbonated mineral water',
-      c: 'It requires tempering eggs',
-      d: 'It must be shaken for an extrodinarily long time',
+      a: 'Requires dry ice', 
+      b: 'Requires carbonated mineral water',
+      c: 'Requires tempering eggs',
+      d: 'Must be shaken a long time',
       answer: 'd'
     },
     {
