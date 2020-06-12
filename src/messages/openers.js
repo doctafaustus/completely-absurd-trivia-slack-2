@@ -1,5 +1,5 @@
 module.exports = [
-  ':a-is-better:', ':accenture-hand:', ':acn-news:', ':awcc:', ':awk-cauldron:', ':awk-fist:', ':awk-sassy-dance:', ':awk-seal-with-it:', ':ayoo:', ':banana-for-scale:', ':brie-df:', ':classic-accenture:', ':dog-tay:', ':dumbass:', ':flawless:', ':floating-pizzas:', ':godzilla-rage:', ':jvn:', ':luv-cry:', ':oh-god-lauren:', ':party-awk:', ':party-racoon:', ':raya:', ':roombawk:', ':sean-giggle:', ':stomping-parrot:', ':awk-fam:', ':svb-fam:', ':tina-dance:'
+  'is :a-is-better:', 'is :accenture-hand:', 'is :acn-news:', 'is :awcc:', 'is :awk-cauldron:', 'is :awk-fist:', 'is :awk-sassy-dance:', 'is :awk-seal-with-it:', 'is :ayoo:', 'is :banana-for-scale:', 'is :brie-df:', 'is :classic-accenture:', 'is :dog-tay:', 'is :dumbass:', 'is :flawless:', 'is :floating-pizzas:', 'is :godzilla-rage:', 'is :jvn:', 'is :luv-cry:', 'is :oh-god-lauren:', 'is :party-awk:', 'is :party-racoon:', 'is :raya:', 'is :roombawk:', 'is :sean-giggle:', 'is :stomping-parrot:', 'is :awk-fam:', 'is :svb-fam:', 'is :tina-dance:'
   // 'gave Kevin more Hellboy statues to paint',
   // 'gave Kevin a $1000 gift certificate to End of an Ear',
   // 'gave Kevin an LOE task with absolutely no details included',
