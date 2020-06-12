@@ -50,7 +50,7 @@ module.exports = [
   'gave Kevin a tour of Sweet, Julie’s well lit, marble filled house',
 ];
 
-
+// ':a-is-better:', ':accenture-hand:', ':acn-news:', ':awcc:', ':awk-cauldron:', ':awk-fist:', ':awk-sassy-dance:', ':awk-seal-with-it:', ':ayoo:', ':banana-for-scale:', ':brie-df:', ':classic-accenture:', ':dog-tay:', ':dumbass:', ':flawless:', ':floating-pizzas:', ':godzilla-rage:', ':jvn:', ':luv-cry:', ':oh-god-lauren:', ':party-awk:', ':party-racoon:', ':raya:', ':roombawk:', ':sean-giggle:', ':stomping-parrot:', ':awk-fam:', ':svb-fam:', ':tina-dance:'
 
 
 

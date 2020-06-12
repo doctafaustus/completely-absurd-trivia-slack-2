@@ -33,7 +33,7 @@ module.exports = {
       question: 'How many custom emojis does clearhead have?', 
       a: '1339', 
       b: '921',
-      c: '1816',
+      c: '1817',
       d: '2198',
       answer: 'c'
     },
