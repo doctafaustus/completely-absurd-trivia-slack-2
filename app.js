@@ -44,12 +44,11 @@ app.get('/', (req, res) => {
 
 // Webhook URLs
 const prodSecretURL = process.env.PORT ? process.env.prodSecretURL : fs.readFileSync(`${__dirname}/private/webhook.txt`).toString();
-const catv2URL = process.env.catv2URL
 const prodRealURL = process.env.prodRealURL;
-app.webhookURL = prodSecretURL;
+app.webhookURL = prodRealURL;
 
 // Set questions
-app.qs = require('./questions/qs-lotr.js');
+app.qs = require('./questions/qs-juneteenth.js');
 
 
 gameInit(app);
