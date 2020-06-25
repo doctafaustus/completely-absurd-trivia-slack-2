@@ -6,7 +6,7 @@ module.exports = {
   gameType: 'text',
   questions: [
     {
-      question: 'The estimated population of the Amish of North America as of June 2018 is:', 
+      question: 'The estimated population of the Amish in North America as of June 2018 is:', 
       a: '415,000', 
       b: '330,000',
       c: '510,000',
@@ -24,10 +24,10 @@ module.exports = {
     {
       question: 'One of the main goals for teenagers on Rumspringa is: ', 
       a: 'To party and experience non-Amish fun', 
-      b: 'To find a spouse',
-      c: 'To try out other religions',
-      d: 'To find a job outside of the community',
-      answer: 'b'
+      b: 'To try out other religions',
+      c: 'To find a spouse',
+      d: 'To  find a job outside of the community',
+      answer: 'c'
     },
     {
       question: 'A common sign you may see when visiting the Amish community asks to please not:', 
@@ -56,7 +56,7 @@ module.exports = {
     {
       question: 'What will you NOT see on a married Amish man?', 
       a: 'Beard', 
-      b: 'Black plain hat ',
+      b: 'Black plain hat',
       c: 'Dark colored suit',
       d: 'Mustache',
       answer: 'd'
@@ -64,7 +64,7 @@ module.exports = {
     {
       question: 'Which of the following IS allowed in Amish communities', 
       a: 'Washing machines', 
-      b: 'Musical nstruments',
+      b: 'Musical instruments',
       c: 'Dancing',
       d: 'Fingertip length skirts',
       answer: 'a'
