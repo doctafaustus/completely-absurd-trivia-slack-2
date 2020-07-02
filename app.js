@@ -48,7 +48,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodRealURL;
 
 // Set questions
-app.qs = require('./questions/qs-mitch-farewell-1.js');
+app.qs = require('./questions/qs-mitch-farewell-2.js');
 
 
 gameInit(app);
