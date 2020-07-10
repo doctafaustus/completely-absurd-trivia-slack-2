@@ -1,5 +1,5 @@
 module.exports = [
-  'is :a-is-better:', 'is :accenture-hand:', 'is :acn-news:', 'is :awcc:', 'is :awk-cauldron:', 'is :awk-fist:', 'is :awk-sassy-dance:', 'is :awk-seal-with-it:', 'is :ayoo:', 'is :banana-for-scale:', 'is :brie-df:', 'is :classic-accenture:', 'is :dog-tay:', 'is :dumbass:', 'is :flawless:', 'is :floating-pizzas:', 'is :godzilla-rage:', 'is :jvn:', 'is :luv-cry:', 'is :oh-god-lauren:', 'is :party-awk:', 'is :party-racoon:', 'is :raya:', 'is :roombawk:', 'is :sean-giggle:', 'is :stomping-parrot:', 'is :awk-fam:', 'is :svb-fam:', 'is :tina-dance:'
+  'showed up to the office wearing non-matching shoes', 'is :a-is-better:', 'is :accenture-hand:', 'is :acn-news:', 'is :awcc:', 'is :awk-cauldron:', 'is :awk-fist:', 'is :awk-sassy-dance:', 'is :awk-seal-with-it:', 'is :ayoo:', 'is :banana-for-scale:', 'is :brie-df:', 'is :classic-accenture:', 'is :dog-tay:', 'is :dumbass:', 'is :flawless:', 'is :floating-pizzas:', 'is :godzilla-rage:', 'is :jvn:', 'is :luv-cry:', 'is :oh-god-lauren:', 'is :party-awk:', 'is :party-racoon:', 'is :raya:', 'is :roombawk:', 'is :sean-giggle:', 'is :stomping-parrot:', 'is :awk-fam:', 'is :svb-fam:', 'is :tina-dance:'
   // 'gave Kevin more Hellboy statues to paint',
   // 'gave Kevin a $1000 gift certificate to End of an Ear',
   // 'gave Kevin an LOE task with absolutely no details included',
