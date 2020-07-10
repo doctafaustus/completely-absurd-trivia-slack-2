@@ -48,7 +48,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
 // Set questions
-app.qs = require('./questions/qs-ebeth-plant.js');
+app.qs = require('./questions/qs-ebeth-dinosaurs.js');
 
 
 gameInit(app);
