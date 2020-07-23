@@ -82,8 +82,8 @@ module.exports = {
       a: 'Yes', 
       b: 'No',
       c: 'Maybe',
-      d: 'IDK but let me at least try',
-      answer: 'c'
+      d: 'IDK but I\'ll try...',
+      answer: 'b'
     }
   ]
 };

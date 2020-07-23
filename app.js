@@ -48,7 +48,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
 // Set questions
-app.qs = require('./questions/qs-gillian-2.jsjs');
+app.qs = require('./questions/qs-gillian-2.js');
 
 
 gameInit(app);
