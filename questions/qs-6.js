@@ -81,7 +81,7 @@ module.exports = {
       question: 'Using JavaScript, can you access content within an iframe if that iframe\'s source is different than the current domain?', 
       a: 'Yes', 
       b: 'No',
-      c: 'Maybe',
+      c: 'Sometimes',
       d: 'IDK but I\'ll try...',
       answer: 'b'
     }
