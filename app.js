@@ -4,17 +4,17 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const admin = require('firebase-admin');
 
-// Cloudstore config
-let serviceAccount = process.env.SERVICE_ACCOUNT_KEY;
-if (!process.env.PORT) {
-  serviceAccount = require('./private/serviceAccountKey.json');
-} else {
-  serviceAccount = JSON.parse(serviceAccount);
-}
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount)
-});
-const db = admin.firestore();
+// // Cloudstore config
+// let serviceAccount = process.env.SERVICE_ACCOUNT_KEY;
+// if (!process.env.PORT) {
+//   serviceAccount = require('./private/serviceAccountKey.json');
+// } else {
+//   serviceAccount = JSON.parse(serviceAccount);
+// }
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount)
+// });
+// const db = admin.firestore();
 
 
 // Express config
@@ -24,7 +24,7 @@ app.use(bodyParser.json({limit: '1mb'}));
 app.use(express.static(__dirname + '/public'));
 app.set('view engine', 'ejs');
 app.urlencodedParser = bodyParser.urlencoded({ extended: false });
-app.db = db;
+// app.db = db;
 
 // Game initializaiton
 const gameInit = require('./src/game-init.js');
