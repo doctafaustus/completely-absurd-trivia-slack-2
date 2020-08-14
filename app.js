@@ -48,7 +48,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
 
 // Set questions
-app.qs = require('./questions/qs-quarantine-hobbies-3.js');
+app.qs = require('./questions/qs-quarantine-hobbies-2.js');
 
 
 gameInit(app);
