@@ -55,7 +55,7 @@ module.exports = function createAnswerResults(app, correctAnswer, isBeardTriv) {
           'attachment_type': 'default',
           'text': `*Answer:* \`\`\`${correctAnswer}\`\`\`\n${resultSummary} ${allOrNoneText} ${nextQuestionText}\n\n\n${title}\n${playerList}`,
           'type': 'image',
-          'image_url': app.qs.questions[app.game.currentQuestion].beardRevealImg
+          'image_url': app.qs.questions[app.game.currentQuestion - 1].beardRevealImg
         }
       ]
     };
