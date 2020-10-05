@@ -86,6 +86,7 @@ module.exports = function gameInit(app) {
   app.post('/broadcast', app.urlencodedParser, checkAdmin, (req, res) => {
     console.log('/broadcast');
     res.status(200).end();
+    
 
     sendMessageToSlack(app.webhookURL, {
       'attachments': [
