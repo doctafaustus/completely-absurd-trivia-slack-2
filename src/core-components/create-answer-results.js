@@ -1,4 +1,4 @@
-module.exports = function createAnswerResults(app, correctAnswer) {
+module.exports = function createAnswerResults(app, correctAnswer, isBeardTriv) {
 
   let allOrNoneText = '';
   let nextQuestionText = '';
@@ -36,10 +36,31 @@ module.exports = function createAnswerResults(app, correctAnswer) {
   }).join('\n');
  
   const title = (app.game.ended) ? '>*GAME ENDED! - FINAL RESULTS:*' : '>*Leaderboard:*';
-  const message = {
-    text: `*Answer:* \`\`\`${correctAnswer}\`\`\`\n${resultSummary} ${allOrNoneText} ${nextQuestionText}\n\n\n${title}\n${playerList}`
-  };
+
+  let message;
+  if (!isBeardTriv) {
+    message = {
+      text: `*Answer:* \`\`\`${correctAnswer}\`\`\`\n${resultSummary} ${allOrNoneText} ${nextQuestionText}\n\n\n${title}\n${playerList}`
+    };
+  } else {
+    message = {
+      "blocks": [
+        {
+          'type': 'divider',
+          'block_id': 'divider1'
+        }
+      ],
+      'attachments': [
+        {
+          'type': 'image',
+          'image_url': app.qs.questions[app.game.currentQuestion].beardRevealImg
+        },
+        {
+          'text': `*Answer:* \`\`\`${correctAnswer}\`\`\`\n${resultSummary} ${allOrNoneText} ${nextQuestionText}\n\n\n${title}\n${playerList}`
+        }
+      ]
+    };
+  }
 
   return message;
-  
 }
