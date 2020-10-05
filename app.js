@@ -46,6 +46,7 @@ app.get('/', (req, res) => {
 const prodSecretURL = process.env.PORT ? process.env.prodSecretURL : fs.readFileSync(`${__dirname}/private/webhook.txt`).toString();
 const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodSecretURL;
+console.log('prodSecretURL', prodSecretURL); 
 
 // Set questions
 app.qs = require('./questions/qs-quarantine-hobbies-3.js');
