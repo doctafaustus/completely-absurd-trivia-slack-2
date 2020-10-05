@@ -83,7 +83,7 @@ module.exports = function gameInit(app) {
 
 
   // Broadcast
-  app.post('/broadcast', app.urlencodedParser, checkAdmin, (req, res) => {
+  app.post('/broadcast2', app.urlencodedParser, checkAdmin, (req, res) => {
     console.log('/broadcast');
     res.status(200).end();
     
