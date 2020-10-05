@@ -20,7 +20,7 @@ module.exports = function nextQuestion(app) {
     const correctAnswerText = evaluateAnswers(app);
 
     // If beard game then show beard image
-    console.log('test', app.qs.specialCategory);
+    console.log('What game?', app.qs.specialCategory);
     if (app.qs.specialCategory === 'beards') {
       console.log('showing beard result');
       sendMessageToSlack(app.webhookURL, app.qs.questions[app.game.currentQuestion].beardRevealImg);
