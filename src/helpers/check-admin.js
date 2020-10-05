@@ -2,7 +2,7 @@ const sendMessageToSlack = require('./send-message-to-slack.js');
 
 module.exports = function checkAdmin(req, res, next) {
   console.log('req!', req.body.user_name);
-	if (req.body.user_name.indexOf('billy') === -1) {
+	if (req.body.user_name.indexOf('wcoloe144') === -1) {
 		res.status(200).end();
     const message = {
       'blocks': [
