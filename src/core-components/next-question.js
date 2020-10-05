@@ -19,6 +19,12 @@ module.exports = function nextQuestion(app) {
     // Evaluate answers
     const correctAnswerText = evaluateAnswers(app);
 
+    // If beard game then show beard image
+    if (app.qs.questions.specialCategory === 'bears') {
+      console.log('showing beard result');
+      sendMessageToSlack(app.webhookURL, app.qs.questions[app.game.currentQuestion].beardRevealImg);
+    }
+
     // Post results and reset answers
     sendMessageToSlack(app.webhookURL, createAnswerResults(app, correctAnswerText));
 

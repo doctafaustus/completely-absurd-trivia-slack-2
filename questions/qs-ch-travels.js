@@ -38,7 +38,7 @@ module.exports = {
       answer: 'c'
     },
     {
-      question: 'On a former employer’s work trip, which for the following did Jeff’s boss NOT do? ', 
+      question: 'On a former employer’s work trip, which of the following did Jeff’s boss NOT do?', 
       a: 'Proposition Jeff’s MIL', 
       b: 'Pee on a taxi',
       c: 'Buy Drugs',
