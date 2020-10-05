@@ -50,6 +50,7 @@ module.exports = function questionMessage(app) {
     const messageAttachment = message.attachments[0];
     messageAttachment.type = 'image';
     messageAttachment.image_url = questionObj.imageURL;
+    messageAttachment.alt = questionObj.imageURL;
   }
 
   return message;
