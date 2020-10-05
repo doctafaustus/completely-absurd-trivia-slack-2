@@ -52,11 +52,10 @@ module.exports = function createAnswerResults(app, correctAnswer, isBeardTriv) {
       ],
       'attachments': [
         {
+          'attachment_type': 'default',
+          'text': `*Answer:* \`\`\`${correctAnswer}\`\`\`\n${resultSummary} ${allOrNoneText} ${nextQuestionText}\n\n\n${title}\n${playerList}`,
           'type': 'image',
           'image_url': app.qs.questions[app.game.currentQuestion].beardRevealImg
-        },
-        {
-          'text': `*Answer:* \`\`\`${correctAnswer}\`\`\`\n${resultSummary} ${allOrNoneText} ${nextQuestionText}\n\n\n${title}\n${playerList}`
         }
       ]
     };
