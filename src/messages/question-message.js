@@ -47,7 +47,7 @@ module.exports = function questionMessage(app) {
 
   // Add additional image field for image game types
   if (app.qs.gameType === 'question') {
-    const text = messageAttachment.text;
+    const text = message.text;
 
     const messageAttachment = message.attachments[0];
     messageAttachment.type = 'image';
