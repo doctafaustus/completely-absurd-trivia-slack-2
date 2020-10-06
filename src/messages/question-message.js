@@ -50,7 +50,8 @@ module.exports = function questionMessage(app) {
     const messageAttachment = message.attachments[0];
     messageAttachment.type = 'image';
     messageAttachment.image_url = questionObj.imageURL;
-    messageAttachment.alt = questionObj.imageURL;
+    messageAttachment.fallback = questionObj.imageURL;
+    messageAttachment.text = messageAttachment.text + `\n <Image Link|${questionObj.imageURL}>`
   }
 
   return message;
