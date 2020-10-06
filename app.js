@@ -49,7 +49,7 @@ app.webhookURL = prodSecretURL;
 console.log('prodSecretURL', prodSecretURL); 
 
 // Set questions
-app.qs = require('./questions/qs-ch-bees.js');
+app.qs = require('./questions/qs-ch-movies.js');
 
 
 gameInit(app);
