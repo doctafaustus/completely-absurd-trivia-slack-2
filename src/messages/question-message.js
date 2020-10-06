@@ -47,13 +47,15 @@ module.exports = function questionMessage(app) {
 
   // Add additional image field for image game types
   if (app.qs.gameType === 'question') {
+    const text = messageAttachment.text;
+
     const messageAttachment = message.attachments[0];
     messageAttachment.type = 'image';
     messageAttachment.image_url = questionObj.imageURL;
     messageAttachment.fallback = questionObj.imageURL;
     messageAttachment.text = {
       type: 'mrkdwn',
-      text: messageAttachment.text + `\n <Image Link|${questionObj.imageURL}>`
+      text: text + `\n <Image Link|${questionObj.imageURL}>`
     };
   }
 
