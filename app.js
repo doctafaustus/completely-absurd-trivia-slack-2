@@ -45,10 +45,10 @@ app.get('/', (req, res) => {
 // Webhook URLs
 const prodSecretURL = process.env.PORT ? process.env.prodSecretURL : fs.readFileSync(`${__dirname}/private/webhook.txt`).toString();
 const prodRealURL = process.env.prodRealURL;
-app.webhookURL = prodRealURL;
+app.webhookURL = prodSecretURL;
 
 // Set questions
-app.qs = require('./questions/qs-ch-beards.js');
+app.qs = require('./questions/qs-ch-nick-at-nite.js');
 
 
 gameInit(app);
