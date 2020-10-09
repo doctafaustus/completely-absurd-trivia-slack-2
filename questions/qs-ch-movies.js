@@ -56,7 +56,7 @@ module.exports = {
     {
       question: 'In Meatballs what is the last prank pulled on Morty?',
       a: 'Tent full of spiders',
-      b: 'Mortys bed on the lake and he is in it',
+      b: 'Morty left on bed raft in lake',
       c: 'Morty tied to a tree',
       d: 'Ink on the eye hole of his binoculars',
       answer: 'b'
