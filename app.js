@@ -48,7 +48,7 @@ const prodRealURL = process.env.prodRealURL;
 app.webhookURL = prodRealURL;
 
 // Set questions
-app.qs = require('./questions/qs-ch-bees.js');
+app.qs = require('./questions/qs-ch-nick-at-nite.js');
 
 
 gameInit(app);
