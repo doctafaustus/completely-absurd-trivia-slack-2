@@ -4,11 +4,11 @@
   "description": "A custom trivia game made for Clearheaders",
   "main": "app.js",
   "dependencies": {
-    "@slack/bolt": "^2.4.1",
+    "@slack/bolt": "^3.12.2",
     "body-parser": "^1.19.0",
     "console.table": "^0.10.0",
     "express": "^4.17.1",
-    "firebase-admin": "^8.6.0",
+    "firebase-admin": "^11.4.1",
     "request": "^2.88.0"
   },
   "devDependencies": {},
